@@ -1,6 +1,8 @@
 # SPDX-License-Identifier: GPL-2.0-only
 
 ccflags-y += -DVERSION=$(VERSION)
+# Support GNU11 syntax on kernels using GNU89 defaults.
+ccflags-y += -std=gnu11
 obj-m += hid-xpadneo.o
 
 hid-xpadneo-y += \
